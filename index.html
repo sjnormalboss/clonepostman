@@ -1,94 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js" type="module"></script>
-  <title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<header>
+  <img class="logo" src="postman.png" alt="logo">
+
+
+  <ul>
+    <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+      <div id="id01" class="modal">
+        
+        <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+            <img src="postman.png" alt="Avatar" class="avatar"><body><h2 style="background-color:white;">Postman</h2></body>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b style="background-color:white;">Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b style="background-color:white;">Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <a href="twohom.html" class="buttona">Login</a>
+            <style>
+              a.buttona {
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                appearance: button;
+                background: white;
+                color: black;
+      
+              }
+            </style> 
+            <label style="background:transparent">
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw" style="background:transparent;">Forgot <a href="#" style="background:transparent;">password?</a></span>
+          </div>
+        </form>
+      </div></li>
+
+      <li>
+
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+        
+        
+        <div id="id02" class="modal">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal"></span>
+          <form class="modal-content">
+            <div class="container">
+              <h2 style="background-color:white;">Sign Up</h2>
+              <p style="background:transparent;"> Please fill in this form to create an account.</p>
+              <hr>
+              <label for="email"><b style="background-color:white;">Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+        
+              <label for="psw"><b style="background-color:white;">Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+        
+              <label for="psw-repeat"><b style="background-color:white;">Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        
+              <label style="background: transparent;">
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px;"> Remember me
+              </label>
+        
+              <p style="background:transparent;">By creating an account you agree to our <a href="#" style="color:dodgerblue;background-color:white;">Terms & Privacy</a>.</p>
+        
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn" >Cancel</button>
+                <a href="twohom.html" class="button"style="background:transparent;">Sign Up</a>
+                <style>
+                  a.button {
+                    -webkit-appearance: button;
+                    -moz-appearance: button;
+                    appearance: button;
+                    color: black;
+                    text-align: center;
+                  }
+                </style>
+              </div>
+            </div>
+          </form>
+        </div>
+        </li>
+  </ul>
+  
+</header>
+
+<body><img src="powor.png" alt="postman in action" style="width:950px;float:left;" />
+<h1>Postman Makes API Development Simple.</h1>Developers use Postman to build modern software for the API-first world<h2></body>
+
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+*{
+  background-color: grey;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 200px;
+  text-align: left;
+  align-items: center;
+  display:flex;
+}
+
+
+header {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: grey;
+
+}
+
+.logo {
+  cursor: pointer;
+  height: 75px;
+}
+
+
+li {
+  display: inline-block;
+  padding: 0px 1px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+.button {
+  color: #ccc;
+  background:transparent;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  height: 40%;
+  float: left;
+}
+.buttona {
+  color: #ccc;
+  background:transparent;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 96%;
+
+}
+
+
+.button:hover {
+  opacity: 0.8;
+}
+.buttona:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+#id01 .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+#id02 .cancelbtn{
+  padding: 14px 20px;
+  background-color:#f44336;
+  float: left;
+  width: 50%;
+  height: 110%;
+}
+
+
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  background-color:white;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  background-color:white;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  background:transparent;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  color: white;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: white;
+  color:black;
+
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
 </head>
-<body>
-  <div class="p-4">
-    <form data-form>
-      <div class="input-group mb-4">
-        <select class="form-select flex-grow-0 w-auto" data-method>
-          <option value="GET" selected>GET</option>
-          <option value="POST">POST</option>
-          <option value="PUT">PUT</option>
-          <option value="PATCH">PATCH</option>
-          <option value="DELETE">DELETE</option>
-        </select>
-        <input data-url required class="form-control" type="url" placeholder="https://example.com" />
-        <button type="submit" class="btn btn-primary">Send</button>
-      </div>
 
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="query-params-tab" data-bs-toggle="tab" data-bs-target="#query-params" type="button" role="tab" aria-controls="query-params" aria-selected="true">Query Params</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="request-headers-tab" data-bs-toggle="tab" data-bs-target="#request-headers" type="button" role="tab" aria-controls="request-headers" aria-selected="false">Headers</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="json-tab" data-bs-toggle="tab" data-bs-target="#json" type="button" role="tab" aria-controls="json" aria-selected="false">JSON</button>
-        </li>
-      </ul>
 
-      <div class="tab-content p-3 border-top-0 border">
-        <div class="tab-pane fade show active" id="query-params" role="tabpanel" aria-labelledby="query-params-tab">
-          <div data-query-params></div>
-          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">Add</button>
-        </div>
-        <div class="tab-pane fade" id="request-headers" role="tabpanel" aria-labelledby="request-headers-tab">
-          <div data-request-headers></div>
-          <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">Add</button>
-        </div>
-        <div class="tab-pane fade" id="json" role="tabpanel" aria-labelledby="json-tab">
-          <div data-json-request-body class="overflow-auto" style="max-height: 200px;"></div>
-        </div>
-      </div>
-    </form>
 
-    <div class="mt-5 d-none" data-response-section>
-      <h3>Response</h3>
-      <div class="d-flex my-2">
-        <div class="me-3">
-          Status: <span data-status></span>
-        </div>
-        <div class="me-3">
-          Time: <span data-time></span>ms
-        </div>
-        <div class="me-3">
-          Size: <span data-size></span>
-        </div>
-      </div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="body-tab" data-bs-toggle="tab" data-bs-target="#body" type="button" role="tab" aria-controls="body" aria-selected="true">Body</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="response-headers-tab" data-bs-toggle="tab" data-bs-target="#response-headers" type="button" role="tab" aria-controls="response-headers" aria-selected="false">Headers</button>
-        </li>
-      </ul>
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
-      <div class="tab-content p-3 border-top-0 border">
-        <div class="tab-pane fade show active" id="body" role="tabpanel" aria-labelledby="body-tab">
-          <div data-json-response-body class="overflow-auto" style="max-height: 200px;"></div>
-        </div>
-        <div class="tab-pane fade" id="response-headers" role="tabpanel" aria-labelledby="response-headers-tab">
-          <div style="display: grid; grid-template-columns: auto 1fr; gap: .5rem 2rem;" data-response-headers></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<script>
+  // Get the modal
+  var modal = document.getElementById('id02');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
 
-  <template data-key-value-template>
-    <div class="input-group my-2" data-key-value-pair>
-      <input type="text" data-key class="form-control" placeholder="Key" />
-      <input type="text" data-value class="form-control" placeholder="Value" />
-      <button type="button" data-remove-btn class="btn btn-outline-danger">Remove</button>
-    </div>
-  </template>
-</body>
+
+
+
+
 </html>
