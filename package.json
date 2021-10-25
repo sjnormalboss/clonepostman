@@ -1,7 +1,7 @@
 {
   "name": "postman-clone",
   "version": "1.0.0",
-  "description": "",
+  "description": "A clone based on Postman!",
   "main": "index.js",
   "scripts": {
     "start": "snowpack dev"
